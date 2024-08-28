@@ -1,5 +1,5 @@
 <template>
-    <button :class="transparent? 'transparent' : 'green'">Регистрация<slot></slot></button>
+    <button :class="transparent? 'transparent' : 'green'"><slot></slot></button>
 </template>
 
 <script setup>
@@ -10,9 +10,9 @@ const props = defineProps({
 
 <style scoped>
 button {
-    padding: 16px 32px;
+    padding: 14px 32px;
     border: 1px solid #32BCA3;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 16px;
 }
 
