@@ -2,7 +2,7 @@
     <div class="wrapperThirdHome">
         <div class="left">
             <div class="textLeft">
-                <span>&mdash; О нас</span>
+                <span><b>&mdash; О нас</b></span>
                 Мы  хотим предоставлять образовательные услуги, <br> которым не учат в школах, и развить будущую <br> карьеру студентов.
             </div>
             <img src="../../assets/ImageThird1.png" alt="">
