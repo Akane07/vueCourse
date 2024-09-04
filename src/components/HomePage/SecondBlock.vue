@@ -10,7 +10,8 @@
                 </div>
             </div>
             <div class="courseBlock">
-
+                <SelectCourse @changeSelected="changeCourses"></SelectCourse>
+                <CoursesBlock :allCourses = 'coursesStore.allCourses'></CoursesBlock>
             </div>
             <Button :transparent = 'true'>Больше курсов</Button>
         </div>
@@ -18,7 +19,19 @@
 </template>
 
 <script setup>
-import Button from '../UI/Button.vue'
+import Button from '../UI/Button.vue';
+import { ref } from 'vue';
+import {useCoursesStore} from '../../stores/Courses';
+import CoursesBlock from './SecondBlock/CoursesBlock.vue';
+import SelectCourse from './SecondBlock/SelectCourse.vue';
+const coursesStore = useCoursesStore()
+
+const selectedCourseType = ref('all');
+
+function changeCourses(item) {
+    selectedCourseType.value = item;
+}
+
 </script>
 
 <style scoped>
@@ -51,5 +64,9 @@ import Button from '../UI/Button.vue'
 }
 .courseBlock{
     height: 469px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 </style>
